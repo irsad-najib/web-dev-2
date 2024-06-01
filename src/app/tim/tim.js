@@ -11,7 +11,7 @@ const header_API = {
   'x-rapidapi-host': 'api-football-v1.p.rapidapi.com'
 };
 
-export default function Timmm ({ idLiga, onTeamClick }) {
+export default function Timmm({ idLiga, onTeamClick }) {
   const [teamData, setTeamData] = useState([]);
   const [error, setError] = useState(null);
 
@@ -40,21 +40,21 @@ export default function Timmm ({ idLiga, onTeamClick }) {
   }, [idLiga]);
 
   return (
-<>
-<div className="mx-auto font-bold text-2xl text-center w-full">Nama-nama Tim</div>
-    <div className={boxBox}>
-      {error && <div>{error}</div>}
-      {teamData.map((team) => (
-        <div key={team.id} className={card}>
-          <img src={team.logo} alt={team.name} className={imgCard} 
-           onClick={() => onTeamClick(team.id)}/>
-          <h2>{team.name}</h2>
-          <p>{team.country}</p>
-        </div>
-      ))}
-    </div>
-</>
-    
+    <>
+      <div className="mx-auto font-bold text-2xl text-center w-full">Nama-nama Tim</div>
+      <div className={boxBox}>
+        {error && <div>{error}</div>}
+        {teamData.map((team) => (
+          <div key={team.id} className={card}>
+            <img src={team.logo} alt={team.name} className={imgCard}
+              onClick={() => onTeamClick(team.id)} />
+            <h2>{team.name}</h2>
+            <p>{team.country}</p>
+          </div>
+        ))}
+      </div>
+    </>
+
   );
 };
 

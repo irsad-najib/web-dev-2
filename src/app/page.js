@@ -19,8 +19,12 @@ export default function Home() {
   return (
     <>
       <Football onLeagueClick={handleLeagueClick} />
-      {selectedLeagueId && <Timmm idLiga={selectedLeagueId} onTeamClick={handleTeamClick} />}
-      {selectedTeamId && selectedLeagueId && <Players idTim={selectedTeamId} idLiga={selectedLeagueId} />}
+      {selectedLeagueId && (
+        <Timmm idLiga={selectedLeagueId} onTeamClick={handleTeamClick} />
+      )}
+      {selectedTeamId && selectedLeagueId && (
+        <Players idTim={selectedTeamId} idLiga={selectedLeagueId} />
+      )}
     </>
   );
 }

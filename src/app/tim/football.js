@@ -6,7 +6,7 @@ const boxBox = "flex flex-wrap justify-center gap-4 mx-10";
 const card = "w-72 bg-gray-800 rounded overflow-hidden shadow-md p-4 text-center";
 const imgCard = "w-full h-auto";
 
-export default function Football ({ onLeagueClick }) {
+export default function Football({ onLeagueClick }) {
   const [leagueData, setLeagueData] = useState([]);
   const [error, setError] = useState(null);
 
